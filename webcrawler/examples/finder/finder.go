@@ -26,9 +26,11 @@ var (
 var logger = log.DLogger()
 
 func init() {
-	flag.StringVar(&firstURL, "first", "http://zhihu.sogou.com/zhihu?query=golang+logo",
+	// flag.StringVar(&firstURL, "first", "http://zhihu.sogou.com/zhihu?query=golang+logo",
+	flag.StringVar(&firstURL, "first", "http://debug.cool",
 		"The first URL which you want to access.")
-	flag.StringVar(&domains, "domains", "zhihu.com",
+	// flag.StringVar(&domains, "domains", "zhihu.com",
+	flag.StringVar(&domains, "domains", "debug.cool",
 		"The primary domains which you accepted. "+
 			"Please using comma-separated multiple domains.")
 	flag.UintVar(&depth, "depth", 3,
