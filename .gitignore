@@ -4,10 +4,10 @@
 *.so
 
 # Executable files
-src/hugo.v1/webcrawler/examples/finder/finder
+/webcrawler/examples/finder/finder
 
 # Output files & folders
-src/hugo.v1/webcrawler/examples/finder/pictures/
+/webcrawler/examples/finder/pictures/
 
 # Profile files & folders
 src/pprof/
