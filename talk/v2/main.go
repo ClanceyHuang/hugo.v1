@@ -23,7 +23,8 @@ func main() {
 	chatbot.Register(chatbot.NewSimpleCN("simple.cn", nil))
 	myChatbot := chatbot.Get(chatbotName)
 	if myChatbot == nil {
-		err := fmt.Errorf("Fatal error: Unsupported chatbot named %s \n ", chatbotName)
+		// fmt.Error 提示文字不能以大写字母开头，标点符号结尾。
+		err := fmt.Errorf(" Fatal error: Unsupported chatbot named %s \n ", chatbotName)
 		checkError(nil, err, true)
 	}
 	inputReader := bufio.NewReader(os.Stdin)
