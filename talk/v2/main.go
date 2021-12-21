@@ -7,7 +7,7 @@ import (
 	"os"
 	"runtime/debug"
 
-	"hugo.v1/helper/talk/v2/chatbot"
+	"hugo.v1/talk/v2/chatbot"
 )
 
 // chatbotName 决定了对话使用的聊天机器人。
@@ -23,7 +23,7 @@ func main() {
 	chatbot.Register(chatbot.NewSimpleCN("simple.cn", nil))
 	myChatbot := chatbot.Get(chatbotName)
 	if myChatbot == nil {
-		err := fmt.Errorf("Fatal error: Unsupported chatbot named %s\n", chatbotName)
+		err := fmt.Errorf("Fatal error: Unsupported chatbot named %s \n ", chatbotName)
 		checkError(nil, err, true)
 	}
 	inputReader := bufio.NewReader(os.Stdin)
